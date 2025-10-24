@@ -1,0 +1,439 @@
+/*
+|--------------------------------------------------------------------------
+| PAGES.CSS - Estilos para páginas internas (Sobre, Orbis, Contato)
+|--------------------------------------------------------------------------
+*/
+
+/* |--------------------------------------------------------------------------
+| Cabeçalho de Página Padrão (.page-header)
+|--------------------------------------------------------------------------
+*/
+.page-header {
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    max-width: 750px;
+    margin: 1rem auto 0 auto;
+}
+
+
+/* |--------------------------------------------------------------------------
+| Layout de Duas Colunas (.two-column-layout)
+|--------------------------------------------------------------------------
+*/
+.two-column-layout {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.two-column-layout .column-text {
+    flex: 1;
+    max-width: 600px;
+}
+.two-column-layout .column-text .section-title {
+    text-align: left;
+    margin-top: 0;
+}
+
+.two-column-layout .column-text p {
+    margin-bottom: 1rem;
+}
+
+.two-column-layout .column-image {
+    flex: 1;
+    text-align: center;
+}
+
+.two-column-layout .column-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    height: auto; 
+    display: block;
+}
+
+/* Inverter a ordem das colunas */
+.two-column-layout.reverse {
+    flex-direction: row-reverse;
+}
+
+/*
+|--------------------------------------------------------------------------
+| NOVOS ESTILOS (Pet Strategy)
+|--------------------------------------------------------------------------
+*/
+
+/* Lista da Metodologia (sobre.html) */
+.methodology-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1.5rem;
+}
+.methodology-list li {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 35px;
+    line-height: 1.4;
+}
+.methodology-list li::before {
+    content: 'A';
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    color: var(--background-color);
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    text-align: center;
+    line-height: 26px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.9rem;
+}
+.methodology-list li:nth-child(2)::before { content: 'I'; }
+.methodology-list li:nth-child(3)::before { content: 'O'; }
+.methodology-list li:nth-child(4)::before { content: 'N'; }
+
+/* Prova Social (sobre.html) */
+.social-proof-section {
+    background-color: var(--secondary-color);
+}
+.proof-grid .proof-card {
+    text-align: left;
+    overflow: hidden; /* Para a imagem */
+    padding: 0; /* Removido padding do benefit-card */
+}
+.proof-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1rem;
+}
+.proof-card h3 {
+    padding: 0 1.5rem;
+}
+.proof-card .location {
+    display: block;
+    padding: 0 1.5rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+.proof-card .result,
+.proof-card .timeline {
+    padding: 0 1.5rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+.proof-card .comment {
+    font-style: italic;
+    opacity: 0.9;
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+    margin-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+
+/* Objeções (orbis.html) */
+.objections-section {
+    padding-bottom: 0;
+}
+.faq-inverted {
+    max-width: 900px;
+    margin: 2rem auto 0 auto;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+.faq-item {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+.faq-item h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Garantia (orbis.html) */
+.guarantee-section {
+    background-color: var(--secondary-color);
+}
+.guarantee-box {
+    background-color: var(--background-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    padding: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(51, 204, 51, 0.1);
+    text-align: center;
+}
+.guarantee-box h3 {
+    color: var(--white);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.guarantee-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    display: inline-block;
+    text-align: left;
+}
+.guarantee-box li {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+.guarantee-box .promise {
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+    font-weight: 500;
+}
+.guarantee-box .promise strong {
+    color: var(--white);
+}
+.guarantee-box small {
+    opacity: 0.8;
+}
+
+/* Escassez (orbis.html) */
+.urgency-section {
+    text-align: center;
+}
+.slots-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem auto 3rem auto;
+    max-width: 800px;
+}
+.slots-card {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 2px solid var(--border-color); 
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+}
+.slots-card h4 {
+    color: var(--white);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.slots-card .slots-value {
+    color: #ff4d4d; /* Vermelho */
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+.slots-card.available .slots-value {
+    color: var(--primary-color); /* Verde */
+}
+.slots-card.available {
+     border-color: var(--primary-color);
+     box-shadow: 0 4px 15px rgba(51, 204, 51, 0.2);
+}
+
+.slots-card .slots-note {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+}
+
+
+/* |--------------------------------------------------------------------------
+| Estilos Específicos da Página de Contato
+|--------------------------------------------------------------------------
+*/
+
+/* Visão de Futuro (contato.html) */
+.future-pacing-section {
+    background-color: var(--secondary-color);
+    padding-bottom: 0;
+}
+.future-pacing {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+.future-pacing .column {
+    padding: 2rem;
+    border-radius: 8px;
+}
+.future-pacing h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+.future-pacing ul {
+    list-style: none;
+    padding: 0;
+}
+.future-pacing ul li {
+    margin-bottom: 0.5rem;
+    background-repeat: no-repeat;
+    background-position: 0 5px;
+    padding-left: 25px;
+}
+.no-aion {
+    background-color: #ff4d4d10;
+    border: 1px solid #ff4d4d;
+}
+.no-aion h4 { color: #ff4d4d; }
+.no-aion ul li {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff4d4d' width='18px' height='18px'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/%3E%3C/svg%3E");
+}
+.with-aion {
+    background-color: #33cc3310;
+    border: 1px solid #33cc33;
+}
+.with-aion h4 { color: #33cc33; }
+.with-aion ul li {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2333cc33' width='18px' height='18px'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E");
+}
+
+
+/* Formulário (contato.html) */
+.contact-form-section {
+    padding-top: var(--spacing-lg);
+}
+.contact-wrapper {
+    display: flex;
+    gap: 3rem;
+    background-color: var(--secondary-color);
+    padding: 3rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.contact-form {
+    flex: 2;
+}
+
+.contact-info {
+    flex: 1;
+    padding-left: 1rem;
+}
+
+.contact-form h2 {
+    color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.contact-info h3 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info i {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.contact-info p a {
+    color: var(--text-color);
+}
+.contact-info p a:hover {
+    color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Responsividade de Contato e Páginas */
+@media (max-width: 992px) {
+    .two-column-layout {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    .two-column-layout.reverse {
+        flex-direction: column;
+    }
+    .two-column-layout .column-text .section-title {
+        text-align: center;
+    }
+    .faq-inverted {
+        grid-template-columns: 1fr;
+    }
+    .future-pacing {
+        grid-template-columns: 1fr;
+    }
+    .contact-wrapper {
+        flex-direction: column;
+        padding: 2rem;
+    }
+    .contact-info {
+        padding-left: 0;
+    }
+    .slots-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .slots-card {
+        min-width: 100%;
+    }
+}
